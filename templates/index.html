@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>WaterLand - Water Park Website Template</title>
+        <title>Quiky - Your best food ordering system</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -19,24 +19,19 @@
 
         <!-- Libraries Stylesheet -->
         <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
-        <!-- <link href="lib/animate/animate.min.css" rel="stylesheet"> -->
         
         <!-- Lightbox CSS -->
-        <!-- <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet"> -->
         <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
         
         <!-- OwlCarousel CSS -->
-        <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
         <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css') }}" rel="stylesheet">
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
         <!-- Template Stylesheet -->
         <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
     </head>
 
     <body>
@@ -53,7 +48,7 @@
         <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="display-6 text-dark"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h1>
+                    <h1 class="display-6 text-dark"><i class="fas fa-concierge-bell text-primary me-3"></i>Quiky</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -61,12 +56,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url_for('home') }}" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <!-- <a href="blog.html" class="nav-item nav-link">Blog</a> -->
                         
-                        <div class="nav-item dropdown">
+                        <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="feature.html" class="dropdown-item">Our Feature</a>
@@ -77,8 +72,8 @@
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div> -->
+                        <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="team-icon d-none d-xl-flex justify-content-center me-3">
                         <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -95,16 +90,15 @@
         <!-- Carousel Start -->
         <div class="header-carousel owl-carousel">
             <div class="header-carousel-item">
-                <img src="{{ url_for('static', filename='images/carousel-1.jpg') }}" class="img-fluid w-100" alt="Image">
+                <img src="{{ url_for('static', filename='images/carousel-3.jpg') }}" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption">
                     <div class="container align-items-center py-4">
                         <div class="row g-5 align-items-center">
                             <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="text-start">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To WaterLand</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">The Biggest Theme & Amusement Park</h1>
-                                    <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
-                                    </p>
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Quiky</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Quiky: Your Food, Our Network, Instant Delivery.</h1>
+                                    <p class="mb-4 fs-5">Quiky connects customers staying at hotels, BnBs without kitchens to nearby restaurants for fast, seamless food ordering and delivery. </p>
                                     <div class="d-flex flex-shrink-0">
                                         <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
                                     </div>
@@ -112,7 +106,7 @@
                             </div>
                             <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="ticket-form p-5">
-                                    <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
+                                    <h2 class="text-dark text-uppercase mb-4">book your app fast</h2>
                                     <form>
                                         <div class="row g-4">
                                             <div class="col-12">
@@ -150,16 +144,15 @@
                 </div>
             </div>
             <div class="header-carousel-item">
-                <img src="{{ url_for('static', filename='images/carousel-2.jpg') }}" class="img-fluid w-100" alt="Image">
+                <img src="{{ url_for('static', filename='images/carousel-1.jpg') }}" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption">
                     <div class="container py-4">
                         <div class="row g-5 align-items-center">
                             <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="text-start">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To WaterLand</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">The Greatest Water and Amusement Park</h1>
-                                    <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
-                                    </p>
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Quiky</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Where Hotels Meet Kitchens Seamlessly.</h1>
+                                    <p class="mb-4 fs-5">Enjoy the convenience of ordering food from the comfort of your accommodation</p>
                                     <div class="d-flex flex-shrink-0">
                                         <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
                                     </div>
@@ -167,7 +160,7 @@
                             </div>
                             <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="ticket-form p-5">
-                                    <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
+                                    <h2 class="text-dark text-uppercase mb-4">book your app fast</h2>
                                     <form>
                                         <div class="row g-4">
                                             <div class="col-12">
@@ -217,9 +210,9 @@
                             <img src="{{ url_for('static', filename='images/feature-1.jpg') }}" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">Best Pools</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
-                                    </p>
+                                    <h4 class="text-white">Diverse Menu Options</h4>
+                                    <!-- <p class="text-white">Choose from a wide variety of cuisines offered by local restaurants, all available at your fingertips.</p> -->
+                                    <p class="text-white">Our system processes orders seamlessly through the hotel or BnB's admin panel, assigning them to the nearest restaurant within 1 km for quick and efficient service.</p>
                                     <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
@@ -231,9 +224,8 @@
                             <img src="{{ url_for('static', filename='images/feature-2.jpg') }}" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">Waterslides</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
-                                    </p>
+                                    <h4 class="text-white">Quick Delivery</h4>
+                                    <p class="text-white">Enjoy fast and reliable delivery from nearby restaurants, ensuring your guest food arrives hot and fresh. Either choose to handle deliveries yourself or utilize our delivery service for added convenience. </p>
                                     <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
@@ -245,9 +237,8 @@
                             <img src="{{ url_for('static', filename='images/feature-3.jpg') }}" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">River Rides</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
-                                    </p>
+                                    <h4 class="text-white">User-Friendly App</h4>
+                                    <p class="text-white">Our platform allows you to receive orders directly through a mobile app or via notifications on your Telegram channel, making it easy to manage and fulfill requests.</p>
                                     <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
@@ -265,9 +256,9 @@
                 <div class="row g-5">
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div>
-                            <h4 class="text-primary">About Waterland</h4>
-                            <h1 class="display-5 mb-4">The Best Theme & Amusement Park For Your Family</h1>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi illum inventore maiores incidunt vero id. Est ipsam, distinctio veritatis earum inventore ab fugit officiis ut ullam, laudantium facere sapiente?
+                            <h4 class="text-primary">About QuikyLand</h4>
+                            <h1 class="display-5 mb-4">Taste the Convenience: Food Delivery Made Easy!</h1>
+                            <p class="mb-5">Experience the future of food delivery with Quiky, where your customer's cravings meet our extensive network of restaurants, ensuring instant delivery right to your customer's room. Join us today and transform the way you dine while away from home!
                             </p>
                             <div class="row g-4">
                                 <div class="col-md-6">
@@ -275,7 +266,7 @@
                                         <div class="me-3"><i class="fas fa-glass-cheers fa-3x text-primary"></i></div>
                                         <div>
                                             <h4>Food & Drinks</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <p>Order from a diverse selection of local restaurants, ensuring a delightful dining experience</p>
                                         </div>
                                     </div>
                                 </div>
@@ -283,8 +274,8 @@
                                     <div class="d-flex">
                                         <div class="me-3"><i class="fas fa-dot-circle fa-3x text-primary"></i></div>
                                         <div>
-                                            <h4>Many Attractions</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4>Local Restaurants</h4>
+                                            <p>Access a variety of nearby restaurants, all within a convenient distance from your accommodation</p>
                                         </div>
                                     </div>
                                 </div>
@@ -292,8 +283,8 @@
                                     <div class="d-flex">
                                         <div class="me-3"><i class="fas fa-hand-holding-usd fa-3x text-primary"></i></div>
                                         <div>
-                                            <h4>Affordable Price</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4>Affordable Prices</h4>
+                                            <p>Enjoy delicious meals at competitive prices, making dining out easy on your wallet</p>
                                         </div>
                                     </div>
                                 </div>
@@ -301,8 +292,8 @@
                                     <div class="d-flex">
                                         <div class="me-3"><i class="fas fa-lock fa-3x text-primary"></i></div>
                                         <div>
-                                            <h4>Safety Lockers</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4>Secure Payments</h4>
+                                            <p>Experience safe and secure payment options for a hassle-free ordering process</p>
                                         </div>
                                     </div>
                                 </div>
@@ -362,8 +353,8 @@
             <div class="container service-section py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Service</h4>
-                    <h1 class="display-5 text-white mb-4">Explore Waterland Park service</h1>
-                    <p class="mb-0 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                    <h1 class="display-5 text-white mb-4">Explore Quiky's Service</h1>
+                    <p class="mb-0 text-white">Quiky offers a seamless food ordering experience, connecting you with local restaurants while your guest enjoy their stay. Our platform ensures quick delivery and a variety of options to satisfy your guest cravings.
                     </p>
                 </div>
                 <div class="row g-4">
@@ -381,11 +372,10 @@
                         <div class="service-item p-4">
                             <div class="service-content">
                                 <div class="mb-4">
-                                    <i class="fas fa-home fa-4x"></i>
+                                    <i class="fas fa-list-alt fa-4x"></i>
                                 </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Private Gazebo</a>
-                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet vel beatae numquam.
-                                </p>
+                                <a href="#" class="h4 d-inline-block mb-3">Custom Menu's</a>
+                                <p class="mb-0">Hotels and BnBs can create personalized menus to enhance guest experiences.</p>
                             </div>
                         </div>
                     </div>
@@ -396,7 +386,7 @@
                                     <i class="fas fa-utensils fa-4x"></i>
                                 </div>
                                 <a href="#" class="h4 d-inline-block mb-3">Delicious Food</a>
-                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet vel beatae numquam.
+                                <p class="mb-0">Savor a wide range of cuisines from local restaurants, delivered right to your door.
                                 </p>
                             </div>
                         </div>
@@ -405,10 +395,10 @@
                         <div class="service-item p-4">
                             <div class="service-content">
                                 <div class="mb-4">
-                                    <i class="fas fa-door-closed fa-4x"></i>
+                                    <i class="fas fa-lock fa-4x"></i>
                                 </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Safety Lockers</a>
-                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet vel beatae numquam.
+                                <a href="#" class="h4 d-inline-block mb-3">Secure Transaction</a>
+                                <p class="mb-0">Enjoy peace of mind with our secure payment options for all your orders.
                                 </p>
                             </div>
                         </div>
@@ -417,10 +407,10 @@
                         <div class="service-item p-4">
                             <div class="service-content">
                                 <div class="mb-4">
-                                    <i class="fas fa-swimming-pool fa-4x"></i>
+                                    <i class="fas fa-handshake fa-4x"></i>
                                 </div>
-                                <a href="#" class="h4 d-inline-block mb-3">River Rides</a>
-                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet vel beatae numquam.
+                                <a href="#" class="h4 d-inline-block mb-3">Food Delivery Partnership</a>
+                                <p class="mb-0">Hotels/BnBs earn commissions on orders while restaurants deliver food at their set prices, growing their reach.
                                 </p>
                             </div>
                         </div>
@@ -523,7 +513,7 @@
         <!-- Attractions End -->
 
         <!-- Gallery Start -->
-        <div class="container-fluid gallery pb-5">
+        <!-- <div class="container-fluid gallery pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Gallery</h4>
@@ -581,12 +571,12 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>         -->
         <!-- Gallery End -->
 
 
         <!-- Blog Start -->
-        <div class="container-fluid blog pb-5">
+        <!-- <div class="container-fluid blog pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Blog</h4>
@@ -644,12 +634,12 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>         -->
         <!-- Blog End -->
 
 
         <!-- Team Start -->
-        <div class="container-fluid team pb-5">
+        <!-- <div class="container-fluid team pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Meet Our Team</h4>
@@ -725,7 +715,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>         -->
         <!-- Team End -->
 
 
@@ -734,14 +724,12 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Testimonials</h4>
-                    <h1 class="display-5 text-white mb-4">Our Clients Riviews</h1>
-                    <p class="text-white mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
+                    <h1 class="display-5 text-white mb-4">Our Clients Reviews</h1>
+                    <p class="text-white mb-0">Discover how Quiky has transformed the dining experience for our clients and their guests.</p>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
                     <div class="testimonial-item p-4">
-                        <p class="text-white fs-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos mollitia fugiat, nihil autem reprehenderit aperiam maxime minima consequatur, nam iste eius velit perferendis voluptatem at atque neque soluta reiciendis doloremque.
-                        </p>
+                        <p class="text-white fs-4 mb-4">"Quiky has revolutionized our guest experience! The food delivery is seamless, and our guests love the variety of options available."</p>
                         <div class="testimonial-inner">
                             <div class="testimonial-img">
                                 <img src="{{ url_for('static', filename='images/testimonial-1.jpg') }}" class="img-fluid" alt="Image">
@@ -749,8 +737,8 @@
                                 </div>
                             </div>
                             <div class="ms-4">
-                                <h4>Person Name</h4>
-                                <p class="text-start text-white">Profession</p>
+                                <h4>K. Vishal Kumar</h4>
+                                <p class="text-start text-white">Hotel Manager</p>
                                 <div class="d-flex text-primary">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -762,8 +750,7 @@
                         </div>
                     </div>
                     <div class="testimonial-item p-4">
-                        <p class="text-white fs-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos mollitia fugiat, nihil autem reprehenderit aperiam maxime minima consequatur, nam iste eius velit perferendis voluptatem at atque neque soluta reiciendis doloremque.
-                        </p>
+                        <p class="text-white fs-4 mb-4">"Our guests rave about the convenience of ordering food through Quiky. It’s a game-changer for our BnB!"</p>
                         <div class="testimonial-inner">
                             <div class="testimonial-img">
                                 <img src="{{ url_for('static', filename='images/testimonial-2.jpg') }}" class="img-fluid" alt="Image">
@@ -771,8 +758,8 @@
                                 </div>
                             </div>
                             <div class="ms-4">
-                                <h4>Person Name</h4>
-                                <p class="text-start text-white">Profession</p>
+                                <h4>JP Singh</h4>
+                                <p class="text-start text-white">BnB Owner</p>
                                 <div class="d-flex text-primary">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -784,8 +771,7 @@
                         </div>
                     </div>
                     <div class="testimonial-item p-4">
-                        <p class="text-white fs-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos mollitia fugiat, nihil autem reprehenderit aperiam maxime minima consequatur, nam iste eius velit perferendis voluptatem at atque neque soluta reiciendis doloremque.
-                        </p>
+                        <p class="text-white fs-4 mb-4">"Quiky has helped us increase our order volume significantly. The process is easy, and our customers are happy!"</p>
                         <div class="testimonial-inner">
                             <div class="testimonial-img">
                                 <img src="{{ url_for('static', filename='images/testimonial-3.jpg') }}" class="img-fluid" alt="Image">
@@ -793,8 +779,8 @@
                                 </div>
                             </div>
                             <div class="ms-4">
-                                <h4>Person Name</h4>
-                                <p class="text-start text-white">Profession</p>
+                                <h4>Ashok Chandra</h4>
+                                <p class="text-start text-white">Restaurant Owner</p>
                                 <div class="d-flex text-primary">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
